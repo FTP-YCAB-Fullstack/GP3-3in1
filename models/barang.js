@@ -14,12 +14,48 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Barang.init({
-    barangNama: DataTypes.STRING,
-    barangPrice: DataTypes.INTEGER,
-    barangDes: DataTypes.STRING,
-    barangBrand: DataTypes.STRING,
-    barangQuantity: DataTypes.INTEGER,
-    barangCategoryName: DataTypes.STRING
+    barangNama: {
+      type: Sequelize.STRING,
+      allowNull: false, 
+      validate : {
+        notNull: true ,
+      }
+    },
+    barangPrice: {
+      type: DataTypes.INTEGER,
+      allowNull: false, 
+      validate : {
+        notNull: true ,
+      }
+    },
+    barangDes: {
+      type: DataTypes.STRING,
+      allowNull: false, 
+      validate : {
+        notNull: true ,
+      }
+    },
+    barangBrand: {
+      type: DataTypes.STRING,
+      allowNull: false, 
+      validate : {
+        notNull: true ,
+      }
+    },
+    barangQuantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false, 
+      validate : {
+        notNull: true ,
+      }
+    },
+    barangCategoryName: {
+      type: DataTypes.STRING,
+      allowNull: false, 
+      validate : {
+        notNull: true ,
+      }
+    }
   }, {
     sequelize,
     modelName: 'Barang',

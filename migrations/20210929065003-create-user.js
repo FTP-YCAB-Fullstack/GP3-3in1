@@ -9,10 +9,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nama: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(50),
+        allowNull: false, 
+        validate : {
+          notNull: true ,
+        }
       },
       email: {
-        type: Sequelize.STRING ,
+        type: Sequelize.STRING(50),
         allowNull: false, 
         validate : {
           notNull: true ,
@@ -27,14 +31,14 @@ module.exports = {
         }
       },
       contact: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER(50),
         allowNull: false, 
         validate : {
           notNull: true ,
         }
       },
       roleId: {
-        type: Sequelize.INTEGER , 
+        type: Sequelize.INTEGER(10), 
         allowNull: false,
         validate: {
           notNull: true
