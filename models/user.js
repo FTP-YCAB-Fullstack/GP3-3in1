@@ -15,14 +15,14 @@ module.exports = (sequelize, DataTypes) => {
   };
   User.init({
     nama: {
-     type: DataTypes.STRING,
+     type: DataTypes.STRING(50),
      allowNull: false, 
      validate : {
        notNull: true,
      }
     },
     email:{
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(50),
       allowNull: false, 
       validate : {
         notNull: true,
@@ -37,14 +37,14 @@ module.exports = (sequelize, DataTypes) => {
       }
      },
     contact:{
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER(50),
       allowNull: false, 
       validate : {
         notNull: true,
       }
      },
     roleId:{
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER(10),
       allowNull: false, 
       validate : {
         notNull: true,

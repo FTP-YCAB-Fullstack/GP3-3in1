@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "kelvinaoe10",
-    "password": "kelvinaoe97@@",
+    "username": "root",
+    "password": "Alimmakruf123",
     "database": "database_tokoSepatu",
     "host": "127.0.0.1",
     "dialect": "mysql"
