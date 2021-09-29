@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "kelvinaoe10",
+    "password": "kelvinaoe97@@",
+    "database": "database_tokoSepatu",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
