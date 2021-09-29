@@ -9,22 +9,46 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       barangNama: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false, 
+        validate : {
+          notNull: true ,
+        }
       },
       barangPrice: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false, 
+        validate : {
+          notNull: true ,
+        }
       },
       barangDes: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false, 
+        validate : {
+          notNull: true ,
+        }
       },
       barangBrand: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false, 
+        validate : {
+          notNull: true ,
+        }
       },
       barangQuantity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false, 
+        validate : {
+          notNull: true ,
+        }
       },
       barangCategoryName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false, 
+        validate : {
+          notNull: true ,
+        }
       },
       createdAt: {
         allowNull: false,
