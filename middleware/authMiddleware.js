@@ -1,24 +1,31 @@
 const jwt = require('jsonwebtoken')
 const {User, Role} = require('./../models')
 
-exports.authentication = (req, res, next) => {
-    let {authorization} = req.headers;
+exports.authentication = async (req, res, next) => {
+    try {
+        let {accesstoken} = req.headers;
     
-    if (!authorization) {
-        return next({code: 401, message: 'Access Token Not Found'})
+    if (!accesstoken) {
+        throw new Error('access token Require')
     }
 
-    let token = authorization.split(' ')[1];
+    // const jwtPayload = jwt.verify(accesstoken , 'tokoSepatu')
+    let token = accestoken.split(' ')[1];
     
 
     req.user = token;
-    next()
+        
+    } catch (error) {
+        next(error)
+    }
+    
+    
 }
 
 exports.authorization = (roles) => (req, res, next) => {
     let {user} = req;
 
-    jwt.verify(user, 'skilvul-secret', async (err, result) => {
+    jwt.verify(user, 'tokoSepatu', async (err, result) => {
         if (err) {
             next({code: 401, message: err.message})
         } else {
