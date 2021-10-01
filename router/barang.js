@@ -1,7 +1,7 @@
 "use strict"
 
 const BarangRouter =  require('express').Router();
-const BarangController = require('../controller/barang')
+const BarangController = require('../controller/barangController')
 
 BarangRouter.get('/', BarangController.getAll)
 BarangRouter.get('/:barangId', BarangController.getDetail)

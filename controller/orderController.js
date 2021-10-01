@@ -1,4 +1,4 @@
-const OrderModel = require('./../models').Order;
+const OrderModel = require('./../models').order;
 console.log(OrderModel)
 
 class OrderController {
@@ -60,7 +60,7 @@ class OrderController {
             });
             if(!orderData) {
                 res.status(404).json({
-                    message: "barang tidak ditemukan"
+                    message: "order tidak ditemukan"
                 })
             }
 
@@ -78,7 +78,7 @@ class OrderController {
             next(error)
         }
     }
-    static removeBarang = async (req, res, next) => {
+    static removeOrder = async (req, res, next) => {
         try {
             const { orderId } = req.params
             const orderData = await OrderModel.findOne({
@@ -95,7 +95,7 @@ class OrderController {
             await orderData.destroy()
 
             res.status(204).json({
-                message: "Data has been deleted"
+                message: "order has been deleted"
             })
         } catch (error) {
             next(error)

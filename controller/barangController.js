@@ -1,4 +1,4 @@
-const BarangModel = require('./../models').Barang;
+const BarangModel = require('../models').Barang;
 
 class BarangController {
     static getAll = async (req, res, next) => {

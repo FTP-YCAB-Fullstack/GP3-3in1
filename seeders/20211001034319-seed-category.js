@@ -13,7 +13,7 @@ module.exports = {
     */
    return queryInterface.buIkInsert('Categorys', [
     {
-     categoryName: "Sepatu Casual"
+      categoryName: "Sepatu Casual"
     },
     {
       categoryName: "Sepatu Sekolah"
