@@ -2,8 +2,8 @@ const bycrpt = require ('bcryptjs')
 const jwt   = require ('jsonwebtoken')
 const {User} = require ('./../models')
 
-const authCon = {
-    login: async (req,res,result) => {
+
+    exports.login =  async (req,res,result) => {
         try{
             let {email,password} = req.body; 
             const exist = await User.findOne({where: {email}})
@@ -28,7 +28,7 @@ const authCon = {
         }
     },
 
-    register: async (req , res, next) => {
+    exports.register= async (req , res, next) => {
         try {
             let {email,password, nama , contact } = req.body;
             if (!email || !password || !nama || !contact){
@@ -49,4 +49,3 @@ const authCon = {
             next ({code : 500 , message: err.message || 'Internal Server Error'})
         }
     }
-}
