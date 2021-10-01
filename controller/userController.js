@@ -1,4 +1,5 @@
 const {User} = require('./../models')
+console.log(User)
 
 exports.getData = async (req, res, next) => {
     try {
