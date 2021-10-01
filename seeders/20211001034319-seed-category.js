@@ -11,16 +11,16 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   return queryInterface.buIkInsert('Categorys', [{
-
+   return queryInterface.buIkInsert('Categorys', [
+    {
      categoryName: "Sepatu Casual"
-   },
-   {
-    categoryName: "Sepatu Sekolah"
-   },
-   {
-    categoryName: "Sepatu Sports"
-   }
+    },
+    {
+      categoryName: "Sepatu Sekolah"
+    },
+    {
+      categoryName: "Sepatu Sports"
+    }
   ])
   },
 

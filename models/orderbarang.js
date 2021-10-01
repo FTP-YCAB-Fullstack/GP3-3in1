@@ -14,27 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   orderBarang.init({
-    orderDate: {
-      type: DataTypes.STRING, 
-      allowNull: false,
-      validate: {
-        notNull: true
-      }
-    },
-    orderbarangQuantity: {
-      type: DataTypes.STRING, 
-      allowNull: false,
-      validate: {
-        notNull: true
-      }
-    },
-    orderTotalPrice: {
-      type: DataTypes.INTEGER, 
-      allowNull: false,
-      validate: {
-        notNull: true
-      }
-    },
     barangId: {
       type: DataTypes.INTEGER, 
       allowNull: false,
