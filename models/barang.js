@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Barang.init({
     barangNama: {
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: false, 
       validate : {
         notNull: true ,
