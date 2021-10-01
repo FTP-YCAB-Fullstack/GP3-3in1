@@ -1,9 +1,5 @@
 const {User} = require('./../models')
-<<<<<<< HEAD
-console.log(User)
-=======
 const userModel = require('./../models').User
->>>>>>> cf9acdb0cae0ec038963bfe818f23512480f9df3
 
 exports.getData = async (req, res, next) => {
     try {
