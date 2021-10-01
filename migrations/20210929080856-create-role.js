@@ -9,10 +9,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       role: {
-        type: Sequelize.STRING, 
-        allowNull: false,
+        type: Sequelize.STRING(15),
+        allowNull: 'false',
         validate: {
-          notNull: true
+          notNull: false
         }
       },
       createdAt: {
