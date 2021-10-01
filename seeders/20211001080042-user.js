@@ -11,17 +11,18 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   return queryInterface.buIkInsert('Categorys', [{
+     await queryInterface.bulkInsert('Users', [
+      {
+       nama : 'Kelvin' , 
+       email : 'kelvin@mail.com',
+       password : 'qwerty123',
+       contact : '123456789',
+       roleId: '1',
+       createdAt: new Date(),
+       updatedAt: new Date()
+     }
+   ])
 
-     categoryName: "Sepatu Casual"
-   },
-   {
-    categoryName: "Sepatu Sekolah"
-   },
-   {
-    categoryName: "Sepatu Sports"
-   }
-  ])
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -31,6 +32,5 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    return queryInterface.buIkDelete('Categorys', null,{});
   }
 };

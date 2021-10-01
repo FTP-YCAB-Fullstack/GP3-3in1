@@ -31,7 +31,7 @@ const {User} = require ('./../models')
     exports.register= async (req , res, next) => {
         try {
             let {email,password, nama , contact } = req.body;
-            if (!email || !password || !nama || !contact){
+            if (!nama|| !email || !password ||!contact){
                 next({code: 400, message: 'Fill username and password form'})
             }
 

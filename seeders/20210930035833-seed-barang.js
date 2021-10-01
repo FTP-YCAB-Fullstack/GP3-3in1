@@ -14,7 +14,6 @@ module.exports = {
      * }], {});
     */
    return queryInterface.buIkInsert('Barangs', [{
-     barangId: 1,
      barangNama: "VANS ORIGINAL OLD SKOOL PRO BLACK/GUM",
      barangPrice: 699000,
      barangImage:"https://www.sneakers.co.id/wp-content/uploads/2019/11/img_5ddbe36ed0b66.png",
@@ -26,7 +25,6 @@ module.exports = {
      updatedAt: new Date()
    },
    {
-    barangId: 2,
     barangNama: "Homyped Lucio Sepatu Sekolah",
     barangPrice: 399900,
     barangImage:"https://cdn.elevenia.co.id/g/3/2/9/5/7/5/25329575_B.jpg",
