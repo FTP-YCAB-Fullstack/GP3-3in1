@@ -7,6 +7,6 @@ OrderRouter.get('/', OrderController.getAll)
 OrderRouter.get('/:orderId', OrderController.getDetail)
 OrderRouter.post('/', OrderController.createOrder)
 OrderRouter.patch('/:orderId', OrderController.patchOrder)
-OrderRouter.delete('/orderId', OrderController.removeBarang)
+OrderRouter.delete('/:orderId', OrderController.removeBarang)
 
 module.exports = OrderRouter
