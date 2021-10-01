@@ -1,5 +1,5 @@
 const BarangModel = require('./../models').Barang;
-console.log(BarangModel)
+// console.log(BarangModel)
 
 class BarangController {
     static getAll = async (req, res, next) => {
@@ -10,7 +10,6 @@ class BarangController {
             next(error)
         }
     }
-
     static createBarang = async (req, res, next) => {
         try {
             const { barangNama, barangPrice, barangDes, barangBrand, barangQuantity, barangCategoryName } = req.body;
