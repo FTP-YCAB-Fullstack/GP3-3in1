@@ -1,5 +1,5 @@
 const BarangModel = require('./../models').Barang;
-console.log(BarangModel)
+
 
 class BarangController {
     static getAll = async (req, res, next) => {

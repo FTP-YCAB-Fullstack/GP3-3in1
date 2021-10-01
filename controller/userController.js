@@ -1,8 +1,9 @@
 const {User} = require('./../models')
+const userModel = require('./../models').User
 
 exports.getData = async (req, res, next) => {
     try {
-        let data = await User.findAll();
+        let data = await userModel.findAll();
 
         if (!data) {
             return next({code: 404, message: 'Users not found'})

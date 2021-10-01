@@ -5,8 +5,8 @@ const auth = require('./../middleware/authMiddleware')
 
 router
     .route('/')
-    .get(auth.authentication, auth.authorization(['admin']), controller.getData)
-
+    .get(auth.authentication, auth.authorization(['admin']),controller.getData)
+    // auth.authentication, auth.authorization(['admin']),
 
 router
     .route('/register')
