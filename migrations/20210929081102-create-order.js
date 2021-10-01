@@ -9,13 +9,25 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       orderCode: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER, 
+        allowNull: false,
+        validate: {
+          notNull: true
+        }
       },
       orderDate: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING, 
+        allowNull: false,
+        validate: {
+          notNull: true
+        }
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER, 
+        allowNull: false,
+        validate: {
+          notNull: true
+        }
       },
       createdAt: {
         allowNull: false,
