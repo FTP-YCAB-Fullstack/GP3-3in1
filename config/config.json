@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Alimmakruf123",
+=======
+    "password": "renita16",
+>>>>>>> 5b3ced293caebc197c9b14d87c7108afce8ac185
     "database": "database_tokoSepatu",
     "host": "127.0.0.1",
     "dialect": "mysql"
