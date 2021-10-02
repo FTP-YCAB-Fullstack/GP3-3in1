@@ -11,15 +11,21 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   return queryInterface.buIkInsert('Categorys', [
+   return queryInterface.bulkInsert('Categories', [
     {
-      categoryName: "Sepatu Casual"
+      categoryName: "Sepatu Casual",
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
-      categoryName: "Sepatu Sekolah"
+      categoryName: "Sepatu Sekolah",
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
-      categoryName: "Sepatu Sports"
+      categoryName: "Sepatu Sports",
+      createdAt: new Date(),
+      updatedAt: new Date()
     }
   ])
   },
@@ -31,6 +37,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    return queryInterface.buIkDelete('Categorys', null,{});
+    return queryInterface.buIkDelete('Categories', null,{});
   }
 };
