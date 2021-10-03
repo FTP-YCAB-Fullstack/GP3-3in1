@@ -37,8 +37,8 @@ module.exports = {
           notNull: true ,
         }
       },
-      roleId: {
-        type: Sequelize.INTEGER(10), 
+      role: {
+        type: Sequelize.STRING, 
         allowNull: false,
         validate: {
           notNull: true
