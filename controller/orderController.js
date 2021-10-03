@@ -1,5 +1,4 @@
 const OrderModel = require('./../models').order;
-console.log(OrderModel)
 
 class OrderController {
     static getAll = async (req, res, next) => {
