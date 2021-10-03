@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({Role}) {
       // define association here
-      this.belongsTo(Role, {foreignKey:'roleId'})
+      // this.belongsTo(Role, {foreignKey:'roleId'})
     }
   };
   User.init({
@@ -44,8 +44,8 @@ module.exports = (sequelize, DataTypes) => {
         notNull: true,
       }
      },
-    roleId:{
-      type: DataTypes.INTEGER(10),
+    role:{
+      type: DataTypes.STRING,
       allowNull: false, 
       validate : {
         notNull: true,

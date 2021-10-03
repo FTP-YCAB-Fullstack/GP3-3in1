@@ -10,33 +10,52 @@ exports.authentication = async (req, res, next) => {
     }
 
     const jwtPayload = jwt.verify(accesstoken , 'tokoSepatu')
+
+    // console.log(jwtPayload)
+    const user = await User.findOne({
+        where :{
+            id: jwtPayload.userId
+        }
+    })
+    if (!user){
+        throw new Error('invalid access token')
+    }
+    req.currentUser = {
+        ...user.dataValues, 
+        // role :'admin'
+    }
+    next()
+
     // let token = accestoken.split(' ')[1];
     
     req.user = token;
     next()
     
+
     } catch (error) {
         next(error)
     }
 }
 
-exports.authorization = (roles) => (req, res, next) => {
-    let {user} = req;
+// perlu token yang berisi userId  
+// lalu cek roleId dari userId yang telah di dapat
+// setelah itu cek roleId tersebut apakah itu admin atau bukan.
+// jika admin maka akan mendapatkan izin untuk melakukan beberapa proses yang hanya untuk admin 
+// jika user maka akan di berikan izin untuk melakukan proses yang dapat di access user.
 
-    jwt.verify(user, 'tokoSepatu', async (err, result) => {
-        if (err) {
-            next({code: 401, message: err.message})
-        } else {
-            let userAuth = await User.findOne({where: {id: result.id}, include:[Role]});
-            
-            userAuth = userAuth.toJSON();
-            
-            if(roles.includes(userAuth.Role.role)) {
-                next()
-            } else {
-                next({code: 403, message: 'Forbidden'})
-            }
+
+
+exports.authorization = (roles) => (req, res, next) => {
+    try {
+        const currentUser = req.currentUser;
+        console.log(currentUser.role)
+        if(!roles.includes(currentUser.role)){
+            throw new Error ('unauthorize access');
         }
-    })
+        next();
+    } catch (error) {
+        next(error)
+    }
+   
 
 }
