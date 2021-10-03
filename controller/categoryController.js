@@ -16,7 +16,6 @@ class CategoryController {
             next({code: 500, message: err.message || 'Internal Server Error'})
         }
     }
-
     static createCategory = async (req,res,next) => {
         try {
             const { categoryName } = req.body
@@ -34,7 +33,6 @@ class CategoryController {
             next({code: 500, message: err.message || 'Internal Server Error'})
         }
     }
-
     static removeCategory = async (req,res,next) =>{
         try {
             const { categoryId } = req.params
