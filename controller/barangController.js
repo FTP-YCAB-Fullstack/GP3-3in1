@@ -1,8 +1,4 @@
 const BarangModel = require('../models').Barang;
-<<<<<<< HEAD:controller/barangController.js
-
-=======
->>>>>>> e2b7364fd44daefdcc7a1ce28bfce39f6d02c32f:controller/barang.js
 
 class BarangController {
     static getAll = async (req, res, next) => {
