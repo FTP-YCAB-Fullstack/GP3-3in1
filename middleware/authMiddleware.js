@@ -11,6 +11,7 @@ exports.authentication = async (req, res, next) => {
 
     const jwtPayload = jwt.verify(accesstoken , 'tokoSepatu')
 
+
     // console.log(jwtPayload)
     const user = await User.findOne({
         where :{
@@ -25,6 +26,13 @@ exports.authentication = async (req, res, next) => {
         // role :'admin'
     }
     next()
+
+    // let token = accestoken.split(' ')[1];
+    
+    req.user = token;
+    next()
+    
+
     } catch (error) {
         next(error)
     }
