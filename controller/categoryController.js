@@ -23,7 +23,6 @@ class CategoryController {
             const newCategoryData = {
                 categoryName : categoryName
             }
-
             const newData = await ModelCategory.create(newCategoryData)
             res.status(200).json({
                 status : 'success',

@@ -43,7 +43,7 @@ exports.login = async (req, res, next) => {
             }
 
             password = bycrpt.hashSync(password,8);
-            await User.create ({nama,email, password,contact, roleId:2})
+            await User.create ({nama,email, password,contact, role:'user'})
 
             res.status(201).json({
                 status : 'success ',
