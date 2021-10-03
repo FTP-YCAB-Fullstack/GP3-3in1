@@ -2,6 +2,7 @@ const bycrpt = require ('bcryptjs')
 const jwt   = require ('jsonwebtoken')
 const {User} = require ('./../models')
 const userModel = require ('./../models').User
+const bcrypt = require('bcryptjs')
 
 
     
