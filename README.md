@@ -1,9 +1,12 @@
 # GP3-3in1
 
-#TOKO SEPATU
+# Tech Stack:
+ - Restful API ExpressJS
+ - Database MySQL
+ - Object Relational Mapping (ORM) Sequelize
 
-Toko sepatu 
-https://lucid.app/lucidchart/61f22f36-9367-4978-827d-47c0c9f8de8e/edit?viewport_loc=-12%2C-7%2C1480%2C743%2C0_0&invitationId=inv_1523a7fe-1706-4fa4-8cfb-c646833689f6
+# Toko Sepatu 
+    https://lucid.app/lucidchart/61f22f36-9367-4978-827d-47c0c9f8de8e/edit?viewport_loc=-12%2C-7%2C1480%2C743%2C0_0&invitationId=inv_1523a7fe-1706-4fa4-8cfb-c646833689f6
 
 Order 
     Orderid         => id order milik user
@@ -18,7 +21,7 @@ Order
 /users/login             => user dapat login menggunakan email dan password
 /users/:id               => user memiliki id
 /users/:id/order         => user dapat melakukan order
-/users/:id/order/:orderId => 
+/users/:id/order/:orderId => orderId milik user
 /users/:id/order/:orderId/orderBarang => user dapat melakukan order barang
 
 /admin
@@ -32,18 +35,16 @@ Order
 
     ## CRUD ORDER
     user
-    /order getAll
-    /order CreateOrder
-    /order/:orderId DeleteOrder
-    /order/:orderId UpdateOrder
+    /order getAll               => user dapat melihat semua order
+    /order/:orderId UpdateOrder => user dapat mengupdate order sendiri
 
     admin
     /order getAll   => admin dapat melihat semua barang yang telah di order user
 
     ## CRUD orderBarang
     user
-    /barang/ CreateOrderBarang
-    /barang/:barangId DeleteOrderBarang
+    /barang/ CreateOrderBarang          => user dapat membuat order barang
+    /barang/:barangId DeleteOrderBarang => user dapat menghapus order barang
 
     ## CRUD BARANG
     user
