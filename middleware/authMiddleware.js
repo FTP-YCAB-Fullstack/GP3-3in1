@@ -26,12 +26,6 @@ exports.authentication = async (req, res, next) => {
     }
     next()
 
-    // let token = accestoken.split(' ')[1];
-    
-    req.user = token;
-    next()
-    
-
     } catch (error) {
         next(error)
     }
