@@ -1,6 +1,6 @@
 const OrderBarangModel = require('../models').orderBarang
 
-class OrderBarang {
+class OrderBarangController {
     static getAll = async (req,res,next) => {
         try {
             const data = await OrderBarangModel.findAll()
@@ -76,4 +76,4 @@ class OrderBarang {
     }
 }
 
-module.exports = OrderBarang
+module.exports = OrderBarangController
