@@ -10,7 +10,10 @@ exports.authentication = async (req, res, next) => {
     }
 
     const jwtPayload = jwt.verify(accesstoken , 'tokoSepatu')
+<<<<<<< HEAD
+=======
 
+>>>>>>> 06bd438e1fae3ed4b92cd7ea44e9ab1f45fb7384
 
     // console.log(jwtPayload)
     const user = await User.findOne({
@@ -26,6 +29,8 @@ exports.authentication = async (req, res, next) => {
         // role :'admin'
     }
     next()
+<<<<<<< HEAD
+=======
 
     // let token = accestoken.split(' ')[1];
     
@@ -33,6 +38,7 @@ exports.authentication = async (req, res, next) => {
     next()
     
 
+>>>>>>> 06bd438e1fae3ed4b92cd7ea44e9ab1f45fb7384
     } catch (error) {
         next(error)
     }
